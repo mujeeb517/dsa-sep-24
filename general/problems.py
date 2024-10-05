@@ -89,3 +89,62 @@ def count_factors_optimized(n):
     # if(is_perfect_square(n)):
     #     return count-1
     # return count
+
+# for(int i=1;i<=n;i++)
+# Time complexity
+# 10 -> 10
+# 10^9 -> 10^9 O(N)
+# brute force / naive
+# optimization
+def count_factors2(n):
+    count = 0
+    for i in range(1,n+1):
+        if( n%i==0 ):
+            count = count + 1
+    return count
+
+# O(N), O(1)
+# return count_factors(n)==2 ? True: False
+# return count_factors(n)==2
+def is_prime(n):
+#    return True if count_factors2(n)==2 else False
+    return count_factors2(n) == 2
+
+# O(sqrt(N))
+def is_prime_optimized(n):
+    upper = int(math.sqrt(n))
+    for i in range(2,upper+1):
+        if(n%i==0):
+            return False
+    
+    return True
+
+# given two numbers calculate gcd, HCF
+# constraints:
+#  1<=a,b<=10^9
+# 12: 1, 2, 3, 4, 6, 12 O(sqrt(N))
+# 16: 1, 2, 4, 8, 16 O(sqrt(N))
+# cf: 1, 2, 4 
+# 4
+
+'''
+    int temp = a;
+    a = b;
+    b = temp;
+'''
+def gcd(a,b):
+    while(b>0):
+        r = a%b
+        a = b
+        b = r
+
+    return a
+
+# lcm(10,12)
+# Easy, Medium, Hard
+'''
+    lcm = (a*b)/gcd
+'''
+def lcm(a,b):
+    gcd_res = gcd(a,b)
+    return (a*b) // gcd_res
