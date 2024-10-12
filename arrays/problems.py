@@ -5,7 +5,7 @@
 # given an unsorted array and element k, return if an element exist
 # input: array, k
 # output: boolean
-# [ -10, 20, 30, 40, 60, 86, 15, 10 ] k:17, False
+# [ -10, 20, 30, 40, 60, 86, 15, 10`` ] k:17, False
 
 # for(int i=0;i<=arr.length;i++)
 # for(int elem:arr)
@@ -94,3 +94,21 @@ def freq(arr, k):
 
 # given a rotated sorted array find the min number
 # [4 5 6 1 2 3]
+
+# int low = 0, high = arr.length-1
+
+# [1,2,3,4,5,6]
+# [4,5,6,1,2,3]
+
+
+def find_min_rotated_arr(arr):
+    low, high = 0, len(arr)-1
+    
+    while (low < high):
+        mid = (low+high)//2
+        if (arr[mid] > arr[high]):
+            low = mid+1
+        else:
+            high = mid
+
+    return arr[low]
