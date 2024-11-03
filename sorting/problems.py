@@ -105,3 +105,33 @@ def merge_intervals(intervals):
 
     res.append(prev)
     return res
+
+# 1 2 3
+
+
+def three_sum(arr):
+    arr.sort()
+    res = []
+    n = len(arr)
+
+    for i in range(n-2):
+        if i > 0 and arr[i-1] == arr[i]:
+            continue
+        low, high = i+1, n-1
+
+        while low < high:
+            sum = arr[i] + arr[low] + arr[high]
+            if sum < 0:
+                low += 1
+            elif sum > 0:
+                high -= 1
+            else:
+                res.append([arr[i], arr[low], arr[high]])
+                while low < high and arr[low] == arr[low+1]:
+                    low += 1
+                while low < high and arr[high] == arr[high-1]:
+                    high -= 1
+                low += 1
+                high -= 1
+
+    return res
