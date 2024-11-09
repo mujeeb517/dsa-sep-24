@@ -1,15 +1,10 @@
-from LL.DS import LinkedList, ListNode
-from LL.problems import print_reverse, merge_sorted_lists, create_list, delete_nth_node,  reverse, print_list, delete, has_cycle
+from stacks.DS import Stack
+from stacks.MinStack import MinStack
+from stacks.problems import valid_parentheses, remove_adjacent_duplicates, warm_temperature
 
 
 def main():
-    list1 = create_list([1, 2, 5])
-    list2 = create_list([3, 6, 7])
-    head = merge_sorted_lists(list1, list2)
-
-    while head:
-        print(head.val)
-        head = head.next
+    print(warm_temperature([73, 74, 75, 71, 69, 72, 76, 73]))
 
 
 if __name__ == '__main__':

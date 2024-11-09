@@ -107,8 +107,7 @@ def merge_intervals(intervals):
     return res
 
 # 1 2 3
-
-
+# O(N^2) + O(NLogN)
 def three_sum(arr):
     arr.sort()
     res = []
