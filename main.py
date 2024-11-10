@@ -1,10 +1,11 @@
 from stacks.DS import Stack
 from stacks.MinStack import MinStack
-from stacks.problems import valid_parentheses, remove_adjacent_duplicates, warm_temperature
+from stacks.problems import evaluate_prefix, infix_to_postfix
 
 
 def main():
-    print(warm_temperature([73, 74, 75, 71, 69, 72, 76, 73]))
+
+    print(infix_to_postfix('A+B*C+D/E'))
 
 
 if __name__ == '__main__':
