@@ -2,24 +2,21 @@ from stacks.DS import Stack
 from stacks.MinStack import MinStack
 from stacks.problems import evaluate_prefix, infix_to_postfix
 from Queue.DS import Queue
+from Trees.DS import BST
+from Trees.alg import preorder, inorder, postorder, find_min, height
 
 
 def main():
-    q = Queue()
-    print(q.length())
+    bst = BST()
+    bst.add(10)
+    bst.add(12)
+    bst.add(8)
+    bst.add(6)
+    bst.add(9)
+    bst.add(-1)
 
-    q.enqueue(1)
-    q.enqueue(2)
-    q.enqueue(3)
-    q.enqueue(4)
-    q.enqueue(5)
-
-    print(q.peek())
-
-    while not q.is_empty():
-        print(q.dequeue())
-
-
+    print(find_min(bst.root))
+    print(height(bst.root))
 
 if __name__ == '__main__':
     main()
