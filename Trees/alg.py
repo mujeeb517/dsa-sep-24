@@ -60,13 +60,15 @@ def count_leaves(root):
         return 1
     if not root.left and root.right:
         return 0
-    
+
     return count_leaves(root.left)+count_leaves(root.right)
 
 
 def is_identical(root1, root2):
     if not root1 and not root2:
         return True
+    if not root1 or not root2:
+        return False
     if root1.val != root2.val:
         return False
     return is_identical(root1.left, root2.left) \
