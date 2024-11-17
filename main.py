@@ -3,7 +3,7 @@ from stacks.MinStack import MinStack
 from stacks.problems import evaluate_prefix, infix_to_postfix
 from Queue.DS import Queue
 from Trees.DS import BST
-from Trees.alg import preorder, inorder, postorder, find_min, height
+from Trees.alg import top_view, delete, level_order_traversal, postorder
 
 
 def main():
@@ -14,9 +14,13 @@ def main():
     bst.add(6)
     bst.add(9)
     bst.add(-1)
+    bst.add(15)
+    bst.add(25)
+    bst.add(30)
 
-    print(find_min(bst.root))
-    print(height(bst.root))
+    tree = delete(bst.root, 10)
+    print(level_order_traversal(tree))
+
 
 if __name__ == '__main__':
     main()
