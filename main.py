@@ -1,8 +1,8 @@
-from Heaps.alg import kth_largest_elem
+from Heaps.alg import kth_largest_elem, running_median
 
 
 def main():
-    print(kth_largest_elem([10, 2, 3, -1, -5, 0], 3))
+    print(running_median([5, 15, 1, 3]))
 
 
 if __name__ == '__main__':
