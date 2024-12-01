@@ -1,8 +1,8 @@
-from Heaps.alg import kth_largest_elem, running_median
+from DP.alg import fib, lis
 
 
 def main():
-    print(running_median([5, 15, 1, 3]))
+    print(lis([10,9,2,5,3,7,101,18]))
 
 
 if __name__ == '__main__':
