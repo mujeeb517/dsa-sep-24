@@ -86,7 +86,7 @@ def flood_fill(grid, sr, sc, color):
     m, n = len(grid), len(grid[0])
 
     def dfs(i, j):
-        if i < 0 or i >= m or j < 0 or j >= n or grid[i][j] == curr_color:
+        if i < 0 or i >= m or j < 0 or j >= n or grid[i][j] == color or grid[i][j] != curr_color:
             return
 
         grid[i][j] = color
@@ -94,7 +94,7 @@ def flood_fill(grid, sr, sc, color):
         dfs(i+1, j)
         dfs(i, j-1)
         dfs(i, j+1)
-    
-    dfs(sr,sc)
-    
+
+    dfs(sr, sc)
+
     return grid
