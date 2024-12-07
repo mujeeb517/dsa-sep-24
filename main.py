@@ -1,8 +1,13 @@
-from DP.alg import fib, lis
+from Graphs.UndirectedList import UndirectedGraph
+from Graphs.alg import dfs, bfs, connected_components, num_of_islands
 
 
 def main():
-    print(lis([10,9,2,5,3,7,101,18]))
+    grid = [["1", "1", "0", "0", "0"],
+            ["1", "1", "0", "0", "0"],
+            ["0", "0", "1", "0", "0"],
+            ["0", "0", "0", "1", "1"]]
+    print(num_of_islands(grid))
 
 
 if __name__ == '__main__':
