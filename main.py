@@ -1,13 +1,12 @@
-from Graphs.UndirectedList import UndirectedGraph
-from Graphs.alg import dfs, bfs, connected_components, num_of_islands
+from arrays.PrefixSum import PrefixSum
 
 
 def main():
-    grid = [["1", "1", "0", "0", "0"],
-            ["1", "1", "0", "0", "0"],
-            ["0", "0", "1", "0", "0"],
-            ["0", "0", "0", "1", "1"]]
-    print(num_of_islands(grid))
+    ds = PrefixSum([10, 1, 8, 2, 3, 5, 6])
+    
+    print(ds.query(1, 4))
+    print(ds.query(2, 4))
+    print(ds.query(0, 4))
 
 
 if __name__ == '__main__':
