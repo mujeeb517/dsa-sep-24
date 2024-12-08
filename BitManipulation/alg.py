@@ -98,10 +98,12 @@ def generate(x, y):
 
 # 1101
 #
+
+
 def reverse_bits(n):
     res = 0
     for i in range(32):
-        if (n & (1 << i)) > 0:
-            res = res >> 1
-            res += 2 << i
+        for i in range(32):
+            if (n & (1 << i)) != 0:
+                res |= (1 << (31 - i))
     return bin(res)
