@@ -82,3 +82,22 @@ def path_sum_II(root, targetSum):
 
     backtrack(root, targetSum, [])
     return res
+
+
+'''
+    Python 
+    General
+    Arrays (Two pointer and Three pointer)
+    Searching (Linear search, binary search)
+    Hashing
+    Sorting
+    LinkedLists (15)
+    Stacks 
+    Queues
+    Trees (20)
+
+    Heaps
+    Backtracking
+    Dynamic programming
+    Graphs
+'''
